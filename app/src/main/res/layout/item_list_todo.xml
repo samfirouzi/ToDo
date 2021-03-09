@@ -11,10 +11,10 @@
     android:background="@color/black">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/taskPart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#EEEEEE"
-        >
+        android:background="#EEEEEE">
 
 
         <LinearLayout
@@ -34,12 +34,15 @@
 
         <TextView
             android:id="@+id/textViewTask"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
+            android:padding="1dp"
             android:text="TextView"
-            android:textSize="14sp"
+            android:textColor="#000000"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewDelete"
             app:layout_constraintStart_toEndOf="@+id/imageViewCheckBox"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.509" />
@@ -63,6 +66,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textViewTask"
             app:srcCompat="@drawable/ic_baseline_check_24" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="Date"
+            android:textColor="#050505"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewDelete"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewDelete" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="19dp"
+            android:layout_height="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textViewDate"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewDelete"
+            app:srcCompat="@drawable/ic_baseline_access_time_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

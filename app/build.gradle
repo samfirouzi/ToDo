@@ -25,6 +25,7 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+
     }
 }
 
@@ -56,4 +57,8 @@ dependencies {
     //database inspector
     debugImplementation "im.dino:dbinspector:4.0.0"
     implementation 'io.github.inflationx:viewpump:2.0.3'
+
+    //Material DateTime Picker - Select a time/date in style
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+
 }

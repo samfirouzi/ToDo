@@ -4,15 +4,26 @@ import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.Date;
 import java.util.UUID;
 
 @Entity
 public class Task {
+
+
+
+
     @PrimaryKey
     @NonNull
     String id;
-     String textTask;
-     int status;
+    String textTask;
+    int status;
+    String date;
+
+
+
+
+
 
     @NonNull
     public String getId() {
@@ -39,9 +50,20 @@ public class Task {
         this.status = status;
     }
 
-    public Task(String textTask, int status) {
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public Task(String textTask, int status, String date) {
         this.id = UUID.randomUUID().toString();
         this.textTask = textTask;
         this.status = status;
+        this.date = date;
+
     }
 }
