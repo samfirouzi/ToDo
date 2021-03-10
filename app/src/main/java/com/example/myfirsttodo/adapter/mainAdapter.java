@@ -56,6 +56,9 @@ public class mainAdapter extends RecyclerView.Adapter<mainAdapter.MainViewHolder
         if (task.getDate()!=null){
             holder.textDate.setText(task.getDate());
         }
+        if (task.getTime()!=null){
+            holder.textViewTime.setText(task.getTime());
+        }
         if (task.getStatus() == 1) {
             holder.imageViewCheck.setImageResource(R.drawable.ic_baseline_check_circle_outline_24);
             holder.textViewTask.setPaintFlags(holder.textViewTask.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
@@ -76,6 +79,7 @@ public class mainAdapter extends RecyclerView.Adapter<mainAdapter.MainViewHolder
     class MainViewHolder extends RecyclerView.ViewHolder {
         ImageView imageViewDelete;
         TextView textViewTask;
+        TextView textViewTime;
         ImageView imageViewCheck;
         final TextView textDate;
 
@@ -84,6 +88,7 @@ public class mainAdapter extends RecyclerView.Adapter<mainAdapter.MainViewHolder
             imageViewCheck = itemView.findViewById(R.id.imageViewCheckBox);
             textViewTask = itemView.findViewById(R.id.textViewTask);
             imageViewDelete = itemView.findViewById(R.id.imageViewDelete);
+            textViewTime=itemView.findViewById(R.id.textViewTime);
             textDate=itemView.findViewById(R.id.textViewDate);
            itemView.setOnClickListener(new View.OnClickListener() {
                @Override

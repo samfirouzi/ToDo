@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase;
 
 import com.example.myfirsttodo.model.Task;
 
-@Database(entities = Task.class,exportSchema = false,version = 1)
+@Database(entities = Task.class,exportSchema = false,version = 2)
 public abstract class TaskDatabase extends RoomDatabase {
     public static  final String DB_NAME="database";
     static TaskDatabase instance;

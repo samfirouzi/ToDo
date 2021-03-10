@@ -19,6 +19,7 @@ public class Task {
     String textTask;
     int status;
     String date;
+    String time;
 
 
 
@@ -59,11 +60,20 @@ public class Task {
         this.date = date;
     }
 
-    public Task(String textTask, int status, String date) {
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public Task(String textTask, int status, String date, String time) {
         this.id = UUID.randomUUID().toString();
         this.textTask = textTask;
         this.status = status;
         this.date = date;
+        this.time = time;
 
     }
 }
